@@ -1,6 +1,4 @@
 const quizData = [
-
-
     {
       question: 'Have you ever had a period of time when you felt like you were on top of the world, had a lot of energy, and felt like you could do anything?',
       options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
@@ -11,41 +9,41 @@ const quizData = [
       options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
       answer: 'Jupiter',
     },
-    // {
-    //   question: 'Have you ever had a period of time when you felt like you were thinking very fast and couldnot slow down your thoughts?',
-    //   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
-    //   answer: 'France',
-    // },
-    // {
-    //   question: 'Have you ever had a period of time when you felt very irritable and easily angered?',
-    //   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
-    //   answer: 'Mount Everest',
-    // },
-    // {
-    //   question: 'Have you ever had a period of time when you needed much less sleep than usual?',
-    //   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
-    //   answer: 'Pacific Ocean',
-    // },
-    // {
-    //   question: 'Have you ever had a period of time when you talked so much that it was hard for others to get a word in edgewise?',
-    //   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
-    //   answer: 'Au',
-    // },
-    // {
-    //   question: 'Have you ever had a period of time when you felt like you were on a mission and had to get things done, no matter what?',
-    //   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
-    //   answer: 'Leonardo da Vinci',
-    // },
-    // {
-    //   question: 'Have you ever had a period of time when you spent a lot of money or made other impulsive decisions?',
-    //   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
-    //   answer: 'Mars',
-    // },
-    // {
-    //   question: 'Have you ever had a period of time when you felt like you were better than everyone else?',
-    //   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
-    //   answer: 'Whale Shark',
-    // },
+    {
+      question: 'Have you ever had a period of time when you felt like you were thinking very fast and couldnot slow down your thoughts?',
+      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+      answer: 'France',
+    },
+    {
+      question: 'Have you ever had a period of time when you felt very irritable and easily angered?',
+      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+      answer: 'Mount Everest',
+    },
+    {
+      question: 'Have you ever had a period of time when you needed much less sleep than usual?',
+      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+      answer: 'Pacific Ocean',
+    },
+    {
+      question: 'Have you ever had a period of time when you talked so much that it was hard for others to get a word in edgewise?',
+      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+      answer: 'Au',
+    },
+    {
+      question: 'Have you ever had a period of time when you felt like you were on a mission and had to get things done, no matter what?',
+      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+      answer: 'Leonardo da Vinci',
+    },
+    {
+      question: 'Have you ever had a period of time when you spent a lot of money or made other impulsive decisions?',
+      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+      answer: 'Mars',
+    },
+    {
+      question: 'Have you ever had a period of time when you felt like you were better than everyone else?',
+      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+      answer: 'Whale Shark',
+    },
     {
       question: 'Have you ever had a period of time when you felt like you were going crazy??',
       options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
@@ -81,6 +79,8 @@ const quizData = [
     optionsElement.className = 'options';
   
     const shuffledOptions = [...questionData.options];
+
+    // for shuffling answers
     shuffleArray(shuffledOptions);
   
     for (let i = 0; i < shuffledOptions.length; i++) {
@@ -120,16 +120,10 @@ const quizData = [
       else if (answer ==="Often") {
         score+=4;
       }
-      else if (answer ==="Quite a lot" ) {
+      else  {
         score+=5;
       }
-      else {
-        incorrectAnswers.push({
-          question: quizData[currentQuestion].question,
-          incorrectAnswer: answer,
-          correctAnswer: quizData[currentQuestion].answer,
-        });
-      }
+   
       currentQuestion++;
       selectedOption.checked = false;
       if (currentQuestion < quizData.length) {
@@ -145,7 +139,7 @@ const quizData = [
     submitButton.style.display = 'none';
     retryButton.style.display = 'inline-block';
     showAnswerButton.style.display = 'inline-block';
-    resultContainer.innerHTML = `You scored ${score} out of ${quizData.length}!`;
+    resultContainer.innerHTML = `You Mental health score ${score} !`;
   }
   
   function retryQuiz() {
@@ -179,7 +173,8 @@ const quizData = [
   
     resultContainer.innerHTML = `
       <p>You scored ${score} out of ${quizData.length}!</p>
-      <p>Incorrect Answers:</p>
+      <p>Showing Pie chart:</p>
+      <p> work under construction </p>
       ${incorrectAnswersHtml}
     `;
   }
