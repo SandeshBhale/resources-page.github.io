@@ -11,41 +11,41 @@ const quizData = [
       options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
       answer: 'Jupiter',
     },
-    {
-      question: 'Have you ever had a period of time when you felt like you were thinking very fast and couldnot slow down your thoughts?',
-      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
-      answer: 'France',
-    },
-    {
-      question: 'Have you ever had a period of time when you felt very irritable and easily angered?',
-      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
-      answer: 'Mount Everest',
-    },
-    {
-      question: 'Have you ever had a period of time when you needed much less sleep than usual?',
-      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
-      answer: 'Pacific Ocean',
-    },
-    {
-      question: 'Have you ever had a period of time when you talked so much that it was hard for others to get a word in edgewise?',
-      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
-      answer: 'Au',
-    },
-    {
-      question: 'Have you ever had a period of time when you felt like you were on a mission and had to get things done, no matter what?',
-      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
-      answer: 'Leonardo da Vinci',
-    },
-    {
-      question: 'Have you ever had a period of time when you spent a lot of money or made other impulsive decisions?',
-      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
-      answer: 'Mars',
-    },
-    {
-      question: 'Have you ever had a period of time when you felt like you were better than everyone else?',
-      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
-      answer: 'Whale Shark',
-    },
+    // {
+    //   question: 'Have you ever had a period of time when you felt like you were thinking very fast and couldnot slow down your thoughts?',
+    //   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+    //   answer: 'France',
+    // },
+    // {
+    //   question: 'Have you ever had a period of time when you felt very irritable and easily angered?',
+    //   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+    //   answer: 'Mount Everest',
+    // },
+    // {
+    //   question: 'Have you ever had a period of time when you needed much less sleep than usual?',
+    //   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+    //   answer: 'Pacific Ocean',
+    // },
+    // {
+    //   question: 'Have you ever had a period of time when you talked so much that it was hard for others to get a word in edgewise?',
+    //   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+    //   answer: 'Au',
+    // },
+    // {
+    //   question: 'Have you ever had a period of time when you felt like you were on a mission and had to get things done, no matter what?',
+    //   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+    //   answer: 'Leonardo da Vinci',
+    // },
+    // {
+    //   question: 'Have you ever had a period of time when you spent a lot of money or made other impulsive decisions?',
+    //   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+    //   answer: 'Mars',
+    // },
+    // {
+    //   question: 'Have you ever had a period of time when you felt like you were better than everyone else?',
+    //   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+    //   answer: 'Whale Shark',
+    // },
     {
       question: 'Have you ever had a period of time when you felt like you were going crazy??',
       options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
@@ -103,14 +103,27 @@ const quizData = [
     quizContainer.appendChild(questionElement);
     quizContainer.appendChild(optionsElement);
   }
-//   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+
   function checkAnswer() {
     const selectedOption = document.querySelector('input[name="quiz"]:checked');
     if (selectedOption) {
       const answer = selectedOption.value;
-      if (answer === quizData[currentQuestion].answer) {
-        score++;
-      } else {
+      if (answer ==="Not at all") {
+        score+=1;
+      } 
+      else if (answer ==="A little") {
+        score+=2;
+      }
+      else if (answer ==="Sometimes") {
+        score+=3;
+      }
+      else if (answer ==="Often") {
+        score+=4;
+      }
+      else if (answer ==="Quite a lot" ) {
+        score+=5;
+      }
+      else {
         incorrectAnswers.push({
           question: quizData[currentQuestion].question,
           incorrectAnswer: answer,
