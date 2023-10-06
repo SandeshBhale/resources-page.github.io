@@ -8,62 +8,47 @@ const quizData = [
     },
     {
       question: ' Have you ever had a period of time when you felt very down, sad, and hopeless?',
-      options: ['Mars', 'Saturn', 'Jupiter', 'Neptune'],
+      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
       answer: 'Jupiter',
     },
     {
       question: 'Have you ever had a period of time when you felt like you were thinking very fast and couldnot slow down your thoughts?',
-      options: ['Brazil', 'Germany', 'France', 'Argentina'],
+      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
       answer: 'France',
     },
     {
       question: 'Have you ever had a period of time when you felt very irritable and easily angered?',
-      options: ['Mount Everest', 'K2', 'Kangchenjunga', 'Makalu'],
+      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
       answer: 'Mount Everest',
     },
     {
       question: 'Have you ever had a period of time when you needed much less sleep than usual?',
-      options: [
-        'Pacific Ocean',
-        'Indian Ocean',
-        'Atlantic Ocean',
-        'Arctic Ocean',
-      ],
+      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
       answer: 'Pacific Ocean',
     },
     {
       question: 'Have you ever had a period of time when you talked so much that it was hard for others to get a word in edgewise?',
-      options: ['Au', 'Ag', 'Cu', 'Fe'],
+      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
       answer: 'Au',
     },
     {
       question: 'Have you ever had a period of time when you felt like you were on a mission and had to get things done, no matter what?',
-      options: [
-        'Pablo Picasso',
-        'Vincent van Gogh',
-        'Leonardo da Vinci',
-        'Michelangelo',
-      ],
+      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
       answer: 'Leonardo da Vinci',
     },
     {
       question: 'Have you ever had a period of time when you spent a lot of money or made other impulsive decisions?',
-      options: ['Mars', 'Venus', 'Mercury', 'Uranus'],
+      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
       answer: 'Mars',
     },
     {
       question: 'Have you ever had a period of time when you felt like you were better than everyone else?',
-      options: [
-        'Great White Shark',
-        'Whale Shark',
-        'Tiger Shark',
-        'Hammerhead Shark',
-      ],
+      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
       answer: 'Whale Shark',
     },
     {
       question: 'Have you ever had a period of time when you felt like you were going crazy??',
-      options: ['Lion', 'Tiger', 'Elephant', 'Giraffe'],
+      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
       answer: 'Lion',
     },
   ];
@@ -118,7 +103,7 @@ const quizData = [
     quizContainer.appendChild(questionElement);
     quizContainer.appendChild(optionsElement);
   }
-  
+//   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
   function checkAnswer() {
     const selectedOption = document.querySelector('input[name="quiz"]:checked');
     if (selectedOption) {
