@@ -139,8 +139,13 @@ const quizData = [
     submitButton.style.display = 'none';
     retryButton.style.display = 'inline-block';
     showAnswerButton.style.display = 'inline-block';
-    resultContainer.innerHTML = `You Mental health score ${score} !`;
-  }
+    let resultShow="";
+    if(score<=10) resultShow="You are safe !!";
+    else if(score>10 && score <=20) resultShow="Mental health in begining stage";
+    else if(score>20 && score<=30) resultShow="Mental health at intermediate stage ";
+    else resultShow="Mental health at advance level";
+    resultContainer.innerHTML = `You Mental health  ` +resultShow;
+  }
   
   function retryQuiz() {
     currentQuestion = 0;
