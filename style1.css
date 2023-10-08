@@ -6,7 +6,7 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-    
+    /* background-color: red; */
     font-weight: bold;
 }
 /* Reset some default styles */
@@ -89,3 +89,9 @@ a:hover {
     background-color: #0056b3; 
 }
 
+
+.quote{
+    font-style: italic;
+    font-size: 25px;
+    color: brown;
+}

@@ -12,7 +12,7 @@ const quizData = [
     {
       question: 'Have you ever had a period of time when you felt like you were thinking very fast and couldnot slow down your thoughts?',
       options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
-     
+      
     },
     {
       question: 'Have you ever had a period of time when you felt very irritable and easily angered?',
@@ -141,10 +141,10 @@ const quizData = [
     showAnswerButton.style.display = 'inline-block';
     let resultShow="";
     if(score<=10) resultShow="You are safe !!";
-    else if(score>10 && score <=20) resultShow="Mental health in begining stage";
-    else if(score>20 && score<=30) resultShow="Mental health at intermediate stage ";
-    else resultShow="Mental health at advance level";
-    resultContainer.innerHTML = `You Mental health  ` +resultShow;
+    else if(score>10 && score <=20) resultShow="Bipolar disorder at Begining stage";
+    else if(score>20 && score<=30) resultShow="Bipolar disorder in Intermediate stage ";
+    else resultShow="Bipolar disorder in Advanced stage";
+    resultContainer.innerHTML = `` +resultShow;
   }
   
   function retryQuiz() {
