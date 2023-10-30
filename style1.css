@@ -48,6 +48,16 @@ nav label {
     margin: 20px;
 }
 
+
+.quote{
+    margin-top: 3%;
+    font-style: italic;
+    font-size: 25px;
+    color: brown;
+    margin-bottom: 5%;
+}
+
+
 /* Add responsive styles using media queries */
 @media (max-width: 768px) {
     nav label {
@@ -70,7 +80,8 @@ nav label {
 
 
 /* Center the "Start" button horizontally and vertically */
-a {
+.startQuizButton {
+    margin-top: 2%;
     display: inline-block;
     padding: 10px 20px;
     background-color: #007BFF; 
@@ -80,18 +91,32 @@ a {
     font-weight: bold;
     transition: background-color 0.3s ease; 
     position: absolute;
-    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    margin-bottom: 2%;
 }
 
 a:hover {
     background-color: #0056b3; 
 }
 
-
-.quote{
-    font-style: italic;
-    font-size: 25px;
-    color: brown;
+.documentation-button-class{
+    margin-top: 9%;
+    display: flex;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
+
+.buttonClass{
+    
+    background-color: #007BFF;
+    padding: 15px 10px;
+    border-radius: 10px;
+    border-style: none;
+    color: white;
+    font:bold;
+    cursor: pointer;
+}
+
