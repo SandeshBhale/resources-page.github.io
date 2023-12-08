@@ -1,6 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
-body {
+/* body {
+  font-family: 'Poppins', sans-serif;
+  background: #b9b3a9;
+  display: flex;
+  justify-content: center;
+} */
+
+nav {
+  background-color: var(--nav-bg-color);
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+nav label {
+  font-size: 30px;
+  color: #fff;
+}
+
+nav label:hover {
+  color: #fffafa; /* Light gray */
+}
+
+.quizContainerContent {
   font-family: 'Poppins', sans-serif;
   background: #b9b3a9;
   display: flex;
@@ -15,6 +38,8 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
 }
+
+/* Navigation */
 
 h1 {
   text-align: center;
