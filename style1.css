@@ -1,47 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
 
-/* Color Variables */
-:root {
-    --main-bg-color: #F8F8F8; /* Light gray background */
-    --nav-bg-color: #9d6464; /* Dark red for the navigation bar */
-    --text-color: #333; /* Dark gray text color */
-    --accent-color: #007BFF; /* Blue accent color */
-}
-
-* {
+*{
     padding: 0;
     margin: 0;
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+    /* background-color: red; */
     font-weight: bold;
 }
-
+/* Reset some default styles */
 body, h1, h2, h3, p, ul {
     margin: 0;
     padding: 0;
 }
 
+/* Set a base font size and font-family */
 body {
     font-family: 'Poppins', sans-serif;
     font-weight: 200;
     font-size: 16px;
-    background-color: var(--main-bg-color);
-    color: var(--text-color);
 }
 
+/* Add some spacing and styles to the navigation menu */
 nav {
-    background-color: var(--nav-bg-color);
+    background-color: #9d6464;
     color: #fff;
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
 }
 
 nav label {
     font-size: 24px;
-    color: #fff;
 }
 
+
+
+/* Style the "Take a Quiz" section */
 .Tq {
     text-align: center;
     font-size: 24px;
@@ -50,22 +45,27 @@ nav label {
 
 .content {
     text-align: center;
-    margin: 40px auto; /* Increased margin for better spacing */
-    max-width: 600px;
+    margin: 20px;
 }
 
-.quote {
+
+.quote{
     margin-top: 3%;
     font-style: italic;
-    font-size: 20px;
+    font-size: 25px;
     color: brown;
     margin-bottom: 5%;
 }
 
-/* Mobile Responsive Styles */
+
+/* Add responsive styles using media queries */
 @media (max-width: 768px) {
     nav label {
-        font-size: 30px;
+        font-size: 20px;
+    }
+
+    nav ul li {
+        margin-right: 10px;
     }
 
     .Tq {
@@ -74,58 +74,49 @@ nav label {
 
     .content {
         font-size: 16px;
-        margin: 20px;
-    }
-
-    .quote {
-        font-size: 18px;
-    }
-
-    .startQuizButton, .buttonClass {
-        padding: 15px 30px;
-        font-size: 16px;
-        border-radius: 30px; /* Rounded corners for a more modern look */
+        margin: 10px;
     }
 }
 
+
+/* Center the "Start" button horizontally and vertically */
 .startQuizButton {
     margin-top: 2%;
     display: inline-block;
-    padding: 15px 30px;
-    background-color: var(--accent-color);
-    color: #fff;
+    padding: 10px 20px;
+    background-color: #007BFF; 
+    color: #fff; 
     text-decoration: none;
-    border-radius: 30px;
+    border-radius: 5px; 
     font-weight: bold;
-    transition: background-color 0.3s ease;
-    position: relative; /* Changed from absolute to relative for better alignment */
+    transition: background-color 0.3s ease; 
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
     margin-bottom: 2%;
 }
 
-.startQuizButton:hover {
-    background-color: #0056b3;
+a:hover {
+    background-color: #0056b3; 
 }
 
-.documentation-button-class {
+.documentation-button-class{
     margin-top: 9%;
     display: flex;
-    padding: 20px; /* Increased padding for better spacing */
+    padding: 10px 20px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.buttonClass {
-    background-color: var(--accent-color);
-    padding: 15px 30px;
-    border-radius: 30px;
+.buttonClass{
+    
+    background-color: #007BFF;
+    padding: 15px 10px;
+    border-radius: 10px;
     border-style: none;
     color: white;
-    font: bold;
+    font:bold;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-.buttonClass:hover {
-    background-color: #0056b3;
-}
