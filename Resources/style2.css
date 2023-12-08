@@ -1,47 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-/* body {
-  font-family: 'Poppins', sans-serif;
-  background: #b9b3a9;
-  display: flex;
-  justify-content: center;
-} */
+body {
+  font-family: sans-serif;
+  background-color: #b9b3a9;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
 
 nav {
-  background-color: var(--nav-bg-color);
+  background-color: #9d6464;
   color: #fff;
-  padding: 20px 0;
+  padding: 10px 20px;
   text-align: center;
 }
 
 nav label {
   font-size: 30px;
-  color: #fff;
 }
 
-nav label:hover {
-  color: #fffafa; /* Light gray */
-}
-
-.quizContainerContent {
-  font-family: 'Poppins', sans-serif;
-  background: #b9b3a9;
+.quizContainer {
   display: flex;
   justify-content: center;
+  padding: 20px;
 }
 
 .container {
-  width: 450px;
-  padding: 20px;
-  margin-top: 80px;
+  width: 100%;
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 20px;
 }
 
-/* Navigation */
-
 h1 {
+  font-size: 20px;
   text-align: center;
 }
 
@@ -76,43 +74,48 @@ h1 {
   background-color: #3071a9;
 }
 
-.result {
-  text-align: center;
+#progressBar {
+  width: 100%;
+  height: 5px;
+  background-color: #ddd;
+  border-radius: 5px;
   margin-top: 20px;
-  font-weight: bold;
 }
 
-.hide{
-  display: none;
+#progressBarInner {
+  width: 0%; /* Adjust based on progress */
+  height: 100%;
+  background-color: #007bff;
+  border-radius: 5px;
 }
 
+@media (max-width: 767px) {
+  nav label {
+    font-size: 30px;
+    margin-bottom: 2%;
+  }
 
+  nav{
+    padding: 20px 0;
+    /* text-align: center; */
+  }
 
-/* css for mobile view */
+  .container {
+    margin-top: 7%;
+    width:auto
+  }
 
-@media screen and (min-width: 768px) {
-    /* Example: Adjust font size or margins for tablets and larger screens */
-    h1 {
-        font-size: 24px;
-    }
+  .question, .options {
+    font-size: 16px;
+  }
 
-    /* Add more tablet and larger screen-specific styles here */
+  .button {
+    font-size: 14px;
+    margin-bottom: 2%;
+  }
+
+  .buttonsToHandle{
+    display: flex;
+    flex-wrap:wrap;
+  }
 }
-
-/* Styles for mobile devices (max-width: 767px) */
-@media screen and (max-width: 767px) {
-    /* Example: Adjust font size or margins for mobile devices */
-    h1 {
-        font-size: 20px;
-    }
-
-    /* Adjust the layout or hide elements as needed for mobile devices */
-    .button {
-        width: 100%; /* Make buttons full width */
-    }
-
-    /* Add more mobile-specific styles here */
-}
-
-
-
