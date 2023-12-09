@@ -1,12 +1,29 @@
+:root {
+  --background-color: #f4f4f4;
+  --nav-background-color: #3498db;
+  --nav-text-color: #fff;
+  --container-background-color: #fff;
+  --container-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  --button-background-color: #4caf50;
+  --button-hover-background-color: #45a049;
+  --progressBar-background-color: #ddd;
+  --progressBarInner-background-color: #4caf50;
+  --transition-duration: 0.3s;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+a{
+  text-decoration: none;
+}
+
 body {
   font-family: sans-serif;
-  background-color: #b9b3a9;
+  background-color: var(--background-color);
 }
 
 h1, h2, h3 {
@@ -14,8 +31,8 @@ h1, h2, h3 {
 }
 
 nav {
-  background-color: #9d6464;
-  color: #fff;
+  background-color: var(--nav-background-color);
+  color: var(--nav-text-color);
   padding: 10px 20px;
   text-align: center;
 }
@@ -28,14 +45,16 @@ nav label {
   display: flex;
   justify-content: center;
   padding: 20px;
+  transition: background-color var(--transition-duration);
 }
 
 .container {
   width: 100%;
-  background-color: #fff;
+  background-color: var(--container-background-color);
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--container-box-shadow);
   padding: 20px;
+  transition: background-color var(--transition-duration);
 }
 
 h1 {
@@ -60,24 +79,24 @@ h1 {
 .button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #428bca;
+  background-color: var(--button-background-color);
   color: #fff;
   border: none;
   cursor: pointer;
   font-size: 16px;
   border-radius: 4px;
-  transition: background-color 0.3s;
+  transition: background-color var(--transition-duration);
   margin-right: 10px;
 }
 
 .button:hover {
-  background-color: #3071a9;
+  background-color: var(--button-hover-background-color);
 }
 
 #progressBar {
   width: 100%;
   height: 5px;
-  background-color: #ddd;
+  background-color: var(--progressBar-background-color);
   border-radius: 5px;
   margin-top: 20px;
 }
@@ -85,27 +104,32 @@ h1 {
 #progressBarInner {
   width: 0%; /* Adjust based on progress */
   height: 100%;
-  background-color: #007bff;
+  background-color: var(--progressBarInner-background-color);
   border-radius: 5px;
+}
+
+
+#quiz-heading{
+  margin-bottom: 4vh;
 }
 
 @media (max-width: 767px) {
   nav label {
     font-size: 30px;
-    margin-bottom: 2%;
-  }
+    font-weight: 560;
+}
 
-  nav{
-    padding: 20px 0;
-    /* text-align: center; */
+  nav {
+    padding: 25px 0;
   }
 
   .container {
     margin-top: 7%;
-    width:auto
+    width: auto;
   }
 
-  .question, .options {
+  .question,
+  .options {
     font-size: 16px;
   }
 
@@ -114,8 +138,8 @@ h1 {
     margin-bottom: 2%;
   }
 
-  .buttonsToHandle{
+  .buttonsToHandle {
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
   }
 }

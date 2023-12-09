@@ -31,7 +31,7 @@ body {
 }
 
 nav {
-    background-color: var(--nav-bg-color);
+    background-color:#3498db;
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -61,6 +61,7 @@ nav label {
     color: brown;
     margin-bottom: 5%;
 }
+
 
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
