@@ -117,3 +117,8 @@ li {
         margin-top: var(--footer-margin-top);
     }
 }
+
+
+a{
+    text-decoration: none;
+}
