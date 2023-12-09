@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
 
+:root {
+    --main-bg-color: #e0d8ea;
+    --nav-bg-color: #3498db;
+    --text-color: #fff;
+    --section-bg-color: #fff;
+    --section-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    --section-text-color: #333;
+    --video-bar-margin-top: 5%;
+    --video-bar-margin-left: 5%;
+    --pdf-show-margin-top: 5%;
+    --pdf-show-margin-left: 4%;
+    --footer-margin-top: 3%;
+}
+
 * {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -8,18 +22,19 @@
 }
 
 body {
-    background-color: #e0d8ea;
+    background-color: var(--main-bg-color);
 }
 
 nav {
-    background-color: #9d6464;
-    padding: 10px 0;
+    background-color: var(--nav-bg-color);
+    color: var(--text-color);
+    padding: 20px 0;
     text-align: center;
 }
 
 nav label {
     font-size: 24px;
-    color: white;
+    color: var(--text-color);
     font-weight: bold;
 }
 
@@ -29,31 +44,33 @@ nav label {
 }
 
 .mainHead h1 {
-    color: #333;
+    color: var(--text-color);
 }
 
 .mainHead h3 {
-    color: #666;
+    color: #666; /* You can use a static color for this */
 }
 
 .main {
     display: flex;
+    flex-wrap: wrap; /* Ensure proper wrapping on smaller screens */
     justify-content: space-between;
     margin: 2% 10%;
 }
 
 .section {
-    background-color: white;
+    background-color: var(--section-bg-color);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--section-box-shadow);
     width: 48%;
+    margin-bottom: 2%; /* Add some spacing between sections */
 }
 
 .section h2 {
     font-size: 20px;
     margin-bottom: 10px;
-    color: #333;
+    color: var(--section-text-color);
 }
 
 ul {
@@ -67,32 +84,36 @@ li {
     color: #444;
 }
 
-/* Add any additional styling as needed */
+/* ... (Other styles remain unchanged) */
 
+@media (max-width: 768px) {
+    .main {
+        margin: 2% 5%; /* Adjust margin for smaller screens */
+    }
 
-#sectionSymptomsColor{
-    background-color: #f2f6fffc;
-}
+    .section {
+        width: 100%; /* Make sections full width on smaller screens */
+    }
 
+    .mainHead h1 {
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
 
-/* added video slidebar */
+    .mainHead h3 {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
 
-.videobar{
-    margin-top: 5%;
-    margin-left: 5%;
-}
+    .videobar {
+        margin-top: var(--video-bar-margin-top);
+        margin-left: var(--video-bar-margin-left);
+    }
 
-.pdfshow{
-    margin-top: 5%;
-    margin-left: 4%;
-}
+    .pdfshow {
+        margin-top: var(--pdf-show-margin-top);
+        margin-left: var(--pdf-show-margin-left);
+    }
 
-.docResources{
-    font-weight: bold;
-    font-size: 35px;
-    margin-bottom: 20px;
-}
-
-.footer{
-    margin-top: 3%;
+    .footer {
+        margin-top: var(--footer-margin-top);
+    }
 }
