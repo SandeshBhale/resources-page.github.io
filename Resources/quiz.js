@@ -9,46 +9,46 @@ const quizData = [
       options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
      
     },
-    {
-      question: 'Have you ever had a period of time when you felt like you were thinking very fast and couldnot slow down your thoughts?',
-      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+    // {
+    //   question: 'Have you ever had a period of time when you felt like you were thinking very fast and couldnot slow down your thoughts?',
+    //   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
       
-    },
-    {
-      question: 'Have you ever had a period of time when you felt very irritable and easily angered?',
-      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+    // },
+    // {
+    //   question: 'Have you ever had a period of time when you felt very irritable and easily angered?',
+    //   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
     
-    },
-    {
-      question: 'Have you ever had a period of time when you needed much less sleep than usual?',
-      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+    // },
+    // {
+    //   question: 'Have you ever had a period of time when you needed much less sleep than usual?',
+    //   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
       
-    },
-    {
-      question: 'Have you ever had a period of time when you talked so much that it was hard for others to get a word in edgewise?',
-      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+    // },
+    // {
+    //   question: 'Have you ever had a period of time when you talked so much that it was hard for others to get a word in edgewise?',
+    //   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
   
-    },
-    {
-      question: 'Have you ever had a period of time when you felt like you were on a mission and had to get things done, no matter what?',
-      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+    // },
+    // {
+    //   question: 'Have you ever had a period of time when you felt like you were on a mission and had to get things done, no matter what?',
+    //   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
    
-    },
-    {
-      question: 'Have you ever had a period of time when you spent a lot of money or made other impulsive decisions?',
-      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+    // },
+    // {
+    //   question: 'Have you ever had a period of time when you spent a lot of money or made other impulsive decisions?',
+    //   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
    
-    },
-    {
-      question: 'Have you ever had a period of time when you felt like you were better than everyone else?',
-      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+    // },
+    // {
+    //   question: 'Have you ever had a period of time when you felt like you were better than everyone else?',
+    //   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
       
-    },
-    {
-      question: 'Have you ever had a period of time when you felt like you were going crazy??',
-      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+    // },
+    // {
+    //   question: 'Have you ever had a period of time when you felt like you were going crazy??',
+    //   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
     
-    },
+    // },
   ];
   
   const quizContainer = document.getElementById('quiz');
@@ -176,15 +176,49 @@ const quizData = [
       `;
     }
   
+    
     resultContainer.innerHTML = `
       <p>You scored ${score} out of ${quizData.length}!</p>
       <p>Showing Pie chart:</p>
       <br>
+
+
+
+      ${incorrectAnswersHtml}
+      
       <p> work under construction </p>
       <br>
-      ${incorrectAnswersHtml}
+      <div id="piechart" style="height: 300px; width: 100%;"> </div>
+
+
     `;
   }
+
+
+  window.onload = function() {
+
+    var chart = new CanvasJS.Chart("piechart", {
+      animationEnabled: true,
+      title: {
+        text: "Desktop Search Engine Market Share - 2016"
+      },
+      data: [{
+        type: "pie",
+        startAngle: 240,
+        yValueFormatString: "##0.00\"%\"",
+        indexLabel: "{label} {y}",
+        dataPoints: [
+          {y: 79.45, label: "Google"},
+          {y: 7.31, label: "Bing"},
+          {y: 7.06, label: "Baidu"},
+          {y: 4.91, label: "Yahoo"},
+          {y: 1.26, label: "Others"}
+        ]
+      }]
+    });
+    chart.render();
+    
+    }
   
   submitButton.addEventListener('click', checkAnswer);
   retryButton.addEventListener('click', retryQuiz);

@@ -108,11 +108,6 @@ li {
         margin-left: var(--video-bar-margin-left);
     }
 
-    .pdfshow {
-        margin-top: var(--pdf-show-margin-top);
-        margin-left: var(--pdf-show-margin-left);
-    }
-
     .footer {
         margin-top: var(--footer-margin-top);
     }
@@ -121,4 +116,27 @@ li {
 
 a{
     text-decoration: none;
+}
+
+
+.twopdfdiv{
+    display: flex;
+}
+
+.pdfshow{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+
+}
+
+.pdfshow a{
+    text-decoration: none;
+    color: black;
+    
+}
+
+.pdfshow a:hover{
+    color: red;
 }
