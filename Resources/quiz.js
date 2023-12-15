@@ -9,46 +9,46 @@ const quizData = [
       options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
      
     },
-    // {
-    //   question: 'Have you ever had a period of time when you felt like you were thinking very fast and couldnot slow down your thoughts?',
-    //   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+    {
+      question: 'Have you ever had a period of time when you felt like you were thinking very fast and couldnot slow down your thoughts?',
+      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
       
-    // },
-    // {
-    //   question: 'Have you ever had a period of time when you felt very irritable and easily angered?',
-    //   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+    },
+    {
+      question: 'Have you ever had a period of time when you felt very irritable and easily angered?',
+      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
     
-    // },
-    // {
-    //   question: 'Have you ever had a period of time when you needed much less sleep than usual?',
-    //   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+    },
+    {
+      question: 'Have you ever had a period of time when you needed much less sleep than usual?',
+      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
       
-    // },
-    // {
-    //   question: 'Have you ever had a period of time when you talked so much that it was hard for others to get a word in edgewise?',
-    //   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+    },
+    {
+      question: 'Have you ever had a period of time when you talked so much that it was hard for others to get a word in edgewise?',
+      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
   
-    // },
-    // {
-    //   question: 'Have you ever had a period of time when you felt like you were on a mission and had to get things done, no matter what?',
-    //   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+    },
+    {
+      question: 'Have you ever had a period of time when you felt like you were on a mission and had to get things done, no matter what?',
+      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
    
-    // },
-    // {
-    //   question: 'Have you ever had a period of time when you spent a lot of money or made other impulsive decisions?',
-    //   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+    },
+    {
+      question: 'Have you ever had a period of time when you spent a lot of money or made other impulsive decisions?',
+      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
    
-    // },
-    // {
-    //   question: 'Have you ever had a period of time when you felt like you were better than everyone else?',
-    //   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+    },
+    {
+      question: 'Have you ever had a period of time when you felt like you were better than everyone else?',
+      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
       
-    // },
-    // {
-    //   question: 'Have you ever had a period of time when you felt like you were going crazy??',
-    //   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+    },
+    {
+      question: 'Have you ever had a period of time when you felt like you were going crazy??',
+      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
     
-    // },
+    },
   ];
   
   const quizContainer = document.getElementById('quiz');
