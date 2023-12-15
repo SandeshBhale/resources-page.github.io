@@ -134,9 +134,8 @@ a{
 .pdfshow a{
     text-decoration: none;
     color: black;
+    font-size: larger;
+    font-weight: 400;
     
 }
 
-.pdfshow a:hover{
-    color: red;
-}
