@@ -4,46 +4,46 @@ const quizData = [
       options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
 
     },
-    {
-      question: ' Have you ever had a period of time when you felt very down, sad, and hopeless?',
-      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+    // {
+    //   question: ' Have you ever had a period of time when you felt very down, sad, and hopeless?',
+    //   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
      
-    },
-    {
-      question: 'Have you ever had a period of time when you felt like you were thinking very fast and couldnot slow down your thoughts?',
-      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+    // },
+    // {
+    //   question: 'Have you ever had a period of time when you felt like you were thinking very fast and couldnot slow down your thoughts?',
+    //   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
       
-    },
-    {
-      question: 'Have you ever had a period of time when you felt very irritable and easily angered?',
-      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+    // },
+    // {
+    //   question: 'Have you ever had a period of time when you felt very irritable and easily angered?',
+    //   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
     
-    },
-    {
-      question: 'Have you ever had a period of time when you needed much less sleep than usual?',
-      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+    // },
+    // {
+    //   question: 'Have you ever had a period of time when you needed much less sleep than usual?',
+    //   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
       
-    },
-    {
-      question: 'Have you ever had a period of time when you talked so much that it was hard for others to get a word in edgewise?',
-      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+    // },
+    // {
+    //   question: 'Have you ever had a period of time when you talked so much that it was hard for others to get a word in edgewise?',
+    //   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
   
-    },
-    {
-      question: 'Have you ever had a period of time when you felt like you were on a mission and had to get things done, no matter what?',
-      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+    // },
+    // {
+    //   question: 'Have you ever had a period of time when you felt like you were on a mission and had to get things done, no matter what?',
+    //   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
    
-    },
-    {
-      question: 'Have you ever had a period of time when you spent a lot of money or made other impulsive decisions?',
-      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+    // },
+    // {
+    //   question: 'Have you ever had a period of time when you spent a lot of money or made other impulsive decisions?',
+    //   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
    
-    },
-    {
-      question: 'Have you ever had a period of time when you felt like you were better than everyone else?',
-      options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
+    // },
+    // {
+    //   question: 'Have you ever had a period of time when you felt like you were better than everyone else?',
+    //   options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
       
-    },
+    // },
     {
       question: 'Have you ever had a period of time when you felt like you were going crazy??',
       options: ['Not at all', 'A little', 'Sometimes', 'Often ','Quite a lot'],
@@ -142,9 +142,9 @@ const quizData = [
     let resultShow="";
     if(score<=10) resultShow="You are safe !!";
     else if(score>10 && score <=20) resultShow="Bipolar disorder at Begining stage";
-    else if(score>20 && score<=30) resultShow="Bipolar disorder in Intermediate stage ";
+    else if(score>20 && score<=30) resultShow="Bipolar disorder in Intermediate stage  ";
     else resultShow="Bipolar disorder in Advanced stage";
-    resultContainer.innerHTML = `` +resultShow;
+    resultContainer.innerHTML = `<br/>` +resultShow;
   }
   
   function retryQuiz() {
@@ -178,6 +178,7 @@ const quizData = [
   
     
     resultContainer.innerHTML = `
+    <br>
       <p>You scored ${score} out of ${quizData.length}!</p>
       <p>Showing Pie chart:</p>
       <br>
@@ -186,10 +187,9 @@ const quizData = [
 
       ${incorrectAnswersHtml}
       
-      <p> work under construction </p>
       <br>
       <div id="piechart" style="height: 300px; width: 100%;"> </div>
-
+      <br>
 
     `;
   }
